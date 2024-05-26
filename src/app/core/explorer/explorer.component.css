@@ -1,0 +1,48 @@
+:host {
+  display: block;
+  width: fit-content;
+}
+
+.resizableNav {
+  display: flex;
+  position: relative;
+  background-color: var(--background-color-shade2);
+  width: 20rem;
+  height: 100%;
+  min-width: 30px;
+  overflow: auto;
+}
+
+.resize-handle-right {
+  height: 100%;
+  position: absolute;
+  right: 0;
+  cursor: col-resize;
+  width: 5px;
+  transition: background-color 200ms;
+}
+
+.resize-handle-right:hover {
+  transition: background-color 200ms;
+  background-color: var(--primary-color);
+}
+
+.explorer-content-wrapper {
+  flex: 1;
+  min-width: 10rem;
+}
+
+.explorer-title, .explorer-content-title {
+  padding: 1rem;
+  font-size: 0.8rem;
+}
+
+.explorer-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.explorer-content-title {
+  padding-top: 0;
+  font-weight: bold;
+}

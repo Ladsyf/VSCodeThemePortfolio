@@ -1,0 +1,4 @@
+<div *ngrxLet="history$ as history">
+  <app-tab *ngFor="let tab of history.present.tabs" [file]="tab"></app-tab>
+</div>
+

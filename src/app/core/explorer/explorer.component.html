@@ -1,0 +1,31 @@
+<nav
+  mwlResizable
+  #resizableNav
+  class="resizableNav"
+  [enableGhostResize]="true"
+  (resizing)="onResize($event)"
+>
+  <div class="explorer-content-wrapper">
+    <div class="explorer-title">Explorer</div>
+    <div class="explorer-content">
+      <div class="explorer-content-title">
+        {{ explorerTitle }}
+      </div>
+      <app-accordion
+        *ngFor="let folder of menu.folders"
+        [folder]="folder"
+        [indent]="1"
+      ></app-accordion>
+      <app-file
+        *ngFor="let file of menu.files"
+        [file]="file"
+        [indent]="1"
+      ></app-file>
+    </div>
+  </div>
+  <div
+    class="resize-handle-right"
+    mwlResizeHandle
+    [resizeEdges]="{ right: true }"
+  ></div>
+</nav>

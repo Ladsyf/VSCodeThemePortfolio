@@ -1,0 +1,12 @@
+:host {
+  width: 100%;
+}
+
+button {
+  width: 100%;
+  padding: .5rem 0;
+}
+
+.selected {
+  border-left: 2px solid white;
+}

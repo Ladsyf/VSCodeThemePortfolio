@@ -1,0 +1,35 @@
+<svg
+  [attr.width]="svgProps.width"
+  [attr.height]="svgProps.height"
+  [attr.veiwBox]="svgProps.viewBox"
+  [attr.fill]="svgProps.fill"
+  #svgIcon
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <path
+    *ngFor="let path of svgProps.paths"
+    [attr.fill-rule]="path.fillRule"
+    [attr.clip-rule]="path.clipRule"
+    [attr.d]="path.d"
+    [attr.fill]="path.fill"
+  ></path>
+  <g *ngFor="let g of svgProps.gs" [attr.clip-path]="g.clipPath">
+    <path
+      *ngFor="let path of g.paths"
+      [attr.fill-rule]="path.fillRule"
+      [attr.clip-rule]="path.clipRule"
+      [attr.d]="path.d"
+      [attr.fill]="path.fill"
+    ></path>
+  </g>
+  <defs *ngFor="let def of svgProps.defs">
+    <clipPath *ngFor="let clipPath of def.clipPaths" [id]="clipPath.id">
+      <rect
+        *ngFor="let rect of clipPath.rects"
+        [attr.width]="rect.width"
+        [attr.height]="rect.height"
+        [attr.fill]="rect.fill"
+      />
+    </clipPath>
+  </defs>
+</svg>

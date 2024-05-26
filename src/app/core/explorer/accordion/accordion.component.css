@@ -1,0 +1,36 @@
+:host {
+  display: flex;
+  flex-direction: column;
+}
+
+.tab {
+  width: 100%;
+  padding: .5rem .5rem;
+  font-size: .8rem;
+  cursor: pointer;
+  display: flex;
+  gap: .5rem;
+  align-items: center;
+  -moz-user-select: -moz-none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+
+  /*
+    Introduced in IE 10.
+    See http://ie.microsoft.com/testdrive/HTML5/msUserSelect/
+  */
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.tab:hover {
+  background-color: var(--background-color-shade4);
+}
+
+.selected, .selected:hover {
+  background-color: var(--background-color-shade5);
+}
+
+.opened > app-icon {
+  rotate: 90deg;
+}

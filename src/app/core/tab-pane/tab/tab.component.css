@@ -1,0 +1,51 @@
+:host {
+  position: relative;
+  display: inline-block;
+}
+
+.tab {
+  background-color: var(--background-color-shade3);
+  height: 100%;
+  display: flex;
+  width: fit-content;
+  align-items: center;
+  justify-content: center;
+  padding: .5rem .5rem .5rem 1rem;
+  cursor: pointer;
+  font-size: .8rem;
+  gap: .5rem;
+
+  -moz-user-select: -moz-none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+
+  /*
+    Introduced in IE 10.
+    See http://ie.microsoft.com/testdrive/HTML5/msUserSelect/
+  */
+  -ms-user-select: none;
+  user-select: none;
+
+  --close-icon-opacity: 0;
+}
+
+.tab:hover {
+  --close-icon-opacity: 1;
+}
+
+.isOpened {
+  background-color: var(--background-color-shade1);
+}
+
+.closeIcon {
+  opacity: var(--close-icon-opacity);
+  padding: .2rem;
+  border-radius: .2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.closeIcon:hover {
+  background-color: var(--background-color-shade6);
+}

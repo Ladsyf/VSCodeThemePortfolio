@@ -1,0 +1,16 @@
+:host {
+  width: 3rem;
+  height: 100%;
+  background-color: var(--background-color-shade4);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.bottom-icons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}

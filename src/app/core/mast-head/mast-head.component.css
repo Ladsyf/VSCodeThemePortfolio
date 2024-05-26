@@ -1,0 +1,41 @@
+:host {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: var(--background-color-shade5);
+  padding: 0.5rem;
+  gap: 1rem;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+  background-color: var(--background-color-shade6);
+  padding: 0.5rem 1rem;
+  border-radius: 0.3rem;
+  font-size: 0.8rem;
+  min-width: fit-content;
+  width: 20rem;
+  border: 1px solid var(--icon-color);
+}
+
+.undo-redo-icon-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.undo-redo-icon {
+  padding: 0.2rem;
+  border-radius: 0.2rem;
+}
+
+.undo-redo-icon:not(.disabled-undo-redo-icon):hover {
+  background-color: var(--background-color-shade6);
+}
+
+.disabled-undo-redo-icon {
+  opacity: .5;
+}

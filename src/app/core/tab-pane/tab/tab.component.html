@@ -1,0 +1,14 @@
+<div class="tab" [ngClass]="openedClass" (click)="openTab()">
+  <app-icon
+  [iconName]="file.iconProps.iconName"
+  [iconWidth]="file.iconProps.width"
+  [iconHeight]="file.iconProps.height"
+  />
+  {{ file.name }}
+  <app-icon
+  (click)="closeTab()"
+  class="closeIcon"
+  [iconName]="closeIcon.iconName"
+  [iconWidth]="closeIcon.width"
+  />
+</div>

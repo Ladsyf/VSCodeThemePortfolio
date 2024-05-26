@@ -1,0 +1,6 @@
+div {
+  background-color: var(--background-color-shade2);
+  min-height: 2rem;
+  width: 100%;
+  overflow: auto;
+}

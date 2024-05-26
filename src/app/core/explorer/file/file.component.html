@@ -1,0 +1,8 @@
+<div #tab class="tab" [ngClass]="tabSelected" (click)="onClick()">
+  <app-icon
+    [iconName]="file.iconProps.iconName"
+    [iconWidth]="file.iconProps.width"
+    [iconHeight]="file.iconProps.height"
+  />
+  {{ file.name }}
+</div>

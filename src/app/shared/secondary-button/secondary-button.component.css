@@ -1,0 +1,14 @@
+:host {
+  display: block;
+}
+button {
+  background-color: var(--background-color-shade3);
+  padding: .7rem 1rem;
+  border-radius: .5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: .4rem;
+  height: 100%;
+  width: 100%;
+}

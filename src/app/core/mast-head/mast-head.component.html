@@ -1,0 +1,19 @@
+<div class="undo-redo-icon-container" *ngrxLet="history$; let history">
+  <button (click)="undo()" [disabled]="getShouldDisableUndoRedoButton(history.past)">
+    <app-icon
+      iconName="undo"
+      [iconWidth]="16"
+      class="undo-redo-icon"
+      [ngClass]="getUndoRedoDisableClass(history.past)"
+    />
+  </button>
+  <button (click)="redo()" [disabled]="getShouldDisableUndoRedoButton(history.future)">
+    <app-icon
+      iconName="redo"
+      [iconWidth]="16"
+      class="undo-redo-icon"
+      [ngClass]="getUndoRedoDisableClass(history.future)"
+    />
+  </button>
+</div>
+<div class="title">Almar's Portfolio</div>

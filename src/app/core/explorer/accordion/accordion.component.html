@@ -1,0 +1,11 @@
+<div #tab class="tab" [ngClass]="tabSelected" (click)="onClick()">
+  <app-icon
+    [iconName]="iconProps.iconName"
+    [iconWidth]="iconProps.width"
+    [iconHeight]="iconProps.height"
+  />
+  {{ folder.name }}
+</div>
+<span *ngIf="folder.isOpened">
+  <app-file *ngFor="let file of folder.files" [file]="file" [indent]="indent+1" />
+</span>

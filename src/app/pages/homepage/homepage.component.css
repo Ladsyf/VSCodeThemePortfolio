@@ -1,0 +1,36 @@
+:host, main {
+  height: 100%;
+  width: 100%;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+h1 {
+  font-size: 4rem;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: lighter;
+}
+
+span.highlight {
+  color: var(--primary-color);
+}
+
+.intro-container {
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+}
+
+.intro-buttons {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
