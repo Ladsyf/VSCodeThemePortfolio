@@ -13,8 +13,6 @@ import { ContactsComponent } from './pages/contacts/contacts.component';
 import { StoreModule } from '@ngrx/store';
 import { pageReducer } from './store/page.reducer';
 import { SharedModule } from './shared/shared.module';
-import { DescriptionComponent } from './pages/mybackground/description/description.component';
-import { TreeComponent } from './pages/mybackground/tree/tree.component';
 
 @NgModule({
   declarations: [
@@ -23,9 +21,7 @@ import { TreeComponent } from './pages/mybackground/tree/tree.component';
     MybackgroundComponent,
     SocialsComponent,
     ProjectsComponent,
-    ContactsComponent,
-    DescriptionComponent,
-    TreeComponent,
+    ContactsComponent
   ],
   imports: [
     BrowserModule,

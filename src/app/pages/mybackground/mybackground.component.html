@@ -1,31 +1,20 @@
 <main>
-  <div class="title">
-    <h1>My Journey as Developer</h1>
-  </div>
-  <div class="timeline-container">
-    <div class="timeline">
-      <div class="container">
-        <div class="content">
-          <h2>Infor PSSC</h2>
-          <p>Lorem ipsum..</p>
-          <p>Lorem ipsum..</p>
-          <p>Lorem ipsum..</p>
-          <p>Lorem ipsum..</p>
-          <p>Lorem ipsum..</p>
+  <header>
+    <h1>My Career as Developer</h1>
+  </header>
+  <section id="timeline">
+    <article *ngFor="let experience of experiences">
+      <div class="inner">
+        <img class="logo" [src]="experience.iconLink" />
+        <div class="xp-detail">
+          <div class="detail-header">
+            <h2>{{ experience.companyName }}</h2>
+            <h3 *ngIf="!!experience.position">{{ experience.position }}</h3>
+            <h4>{{ experience.yearsOfStay }}</h4>
+          </div>
+          <p>{{ experience.description }}</p>
         </div>
       </div>
-      <div class="container">
-        <div class="content">
-          <h2>2016</h2>
-          <p>Lorem ipsum..</p>
-        </div>
-      </div>
-      <div class="container">
-        <div class="content">
-          <h2>2016</h2>
-          <p>Lorem ipsum..</p>
-        </div>
-      </div>
-    </div>
-  </div>
+    </article>
+  </section>
 </main>
