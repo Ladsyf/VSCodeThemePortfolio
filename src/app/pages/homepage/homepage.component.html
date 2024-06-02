@@ -9,9 +9,9 @@
       <span>A</span>&nbsp;<span>Full-stack</span>&nbsp;<span>Developer</span>
     </h2>
     <div class="intro-buttons">
-      <app-secondary-button iconName="phone" [iconWidth]="19"  />
-      <app-secondary-button iconName="linkedin" [iconWidth]="25" [iconHeight]="23" />
-      <app-secondary-button iconName="github" [iconWidth]="25" />
+      <app-secondary-button iconName="phone" [iconWidth]="19" (click)="openLink('tel:+639092095920')" />
+      <app-secondary-button iconName="linkedin" [iconWidth]="25" [iconHeight]="23" (click)="openLink('https://www.linkedin.com/in/almarjvr/')" />
+      <app-secondary-button iconName="github" [iconWidth]="25" (click)="openLink('https://github.com/Ladsyf')" />
       <app-primary-button caption="My Projects" iconName="redo" [iconWidth]="16" (click)="openProjectsFile()"/>
     </div>
   </div>

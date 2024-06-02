@@ -69,6 +69,8 @@ export class PageService
     const history = this._localPage.getHistory();
     const currentPage = history.present;
 
+    if((currentPage.tabs?.length ?? 0) <= 1) return
+
     if (file.isOpened && (currentPage.tabs?.length ?? 0 <= 0))
     {
       const openedFileIndex = currentPage.tabs?.findIndex(x => x.isOpened) ?? 0;

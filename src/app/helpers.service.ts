@@ -3,15 +3,23 @@ import { Injectable } from '@angular/core';
 @Injectable({
   providedIn: 'root'
 })
-export class HelpersService {
+export class HelpersService
+{
 
   constructor() { }
 
-  setLocalExplorerWidth(width: string) {
+  public setLocalExplorerWidth(width: string)
+  {
     localStorage.setItem("explorerWidth", width);
   }
 
-  getLocalExporerWidth() {
+  public getLocalExporerWidth()
+  {
     return localStorage.getItem("explorerWidth");
+  }
+
+  public openLink(url: string): void
+  {
+    window.open(url, "_blank")
   }
 }

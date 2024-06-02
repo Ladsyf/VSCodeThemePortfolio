@@ -1,6 +1,7 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { PageService } from '../page.service';
 import { LocalPageService } from '../local-page.service';
+import { HelpersService } from '../../helpers.service';
 
 @Component({
   selector: 'app-homepage',
@@ -11,7 +12,7 @@ import { LocalPageService } from '../local-page.service';
 export class HomepageComponent
 {
 
-  constructor(private _pageService: PageService, private _localPageService: LocalPageService)
+  constructor(private _pageService: PageService, private _localPageService: LocalPageService, private _helperService: HelpersService)
   {
   }
 
@@ -33,5 +34,10 @@ export class HomepageComponent
     const addToTabs = !this._localPageService.getHistory().present.tabs?.some(x => x.id === projectFile.id);
 
     this._pageService.selectExplorerFile(projectFile, addToTabs);
+  }
+
+  public openLink(url: string)
+  {
+    this._helperService.openLink(url);
   }
 }
